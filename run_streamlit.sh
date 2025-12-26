@@ -1,11 +1,6 @@
 #!/bin/bash
 # Script to run the Streamlit app
 
-# Activate virtual environment if it exists
-if [ -d ".venv" ]; then
-    source .venv/bin/activate
-fi
-
 # Check if OPENAI_API_KEY is set
 if [ -z "$OPENAI_API_KEY" ]; then
     echo "⚠️  Warning: OPENAI_API_KEY environment variable is not set"
@@ -17,5 +12,5 @@ fi
 echo "🚀 Starting Streamlit app..."
 echo "   Open your browser to the URL shown below"
 echo ""
-streamlit run src/streamlit_app.py
+uv run streamlit run src/streamlit_app.py
 
